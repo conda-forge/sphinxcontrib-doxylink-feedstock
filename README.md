@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About sphinxcontrib-doxylink
 ============================
 
@@ -18,8 +14,17 @@ Summary: Sphinx extension for linking to Doxygen documentation.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/sphinxcontrib-doxylink-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/sphinxcontrib-doxylink-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6125&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/sphinxcontrib-doxylink-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
