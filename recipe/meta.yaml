@@ -10,7 +10,7 @@ source:
   sha256: 021fa1df54041de9cb683bd7a297bd04ebad4107b3a64917ec26bbeb5923dfda
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
@@ -23,7 +23,6 @@ requirements:
     - pyparsing
     - python >=3.4
     - sphinx >=0.6
-    - sphinxcontrib
 
 test:
   imports:
@@ -41,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - duncanmmacleod
+    - erykoff
