@@ -1,18 +1,18 @@
 {% set name = "sphinxcontrib-doxylink" %}
-{% set version = "1.6.1" %}
+{% set version = "1.8" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 021fa1df54041de9cb683bd7a297bd04ebad4107b3a64917ec26bbeb5923dfda
+  sha256: 27c986da9930be8ebda791974e808dbcbe61505385a16ac9a0bd9257ffb59769
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
