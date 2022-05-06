@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-doxylink" %}
-{% set version = "1.11.2" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,30 +7,36 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8cc80292f7a49034f673d5311df119183128c8f773ed2687ed0644483eeb27c9
+  sha256: 03e871f5833c92f5c1b6f201ca5ab1d9299c12ec749333d3a1c667038baeb050
 
 build:
   number: 0
   noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.4
     - pip
-    - setuptools
+    - poetry-core >=1.0.0
+    - python >=3.7,<4.0
   run:
-    - pyparsing
-    - python >=3.4
-    - sphinx >=0.6
+    - pyparsing >=3.0.8,<4.0.0
+    - python-dateutil >=2.8.2,<3.0.0
+    - python >=3.7,<4.0
+    - sphinx >=1.6
 
 test:
+  requires:
+    - pip
   imports:
     - sphinxcontrib.doxylink
+  commands:
+    # check requirements
+    - python -m pip check
 
 about:
   home: http://sphinxcontrib-doxylink.readthedocs.io
-  license: BSD
+  license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Sphinx extension for linking to Doxygen documentation.

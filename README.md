@@ -3,7 +3,7 @@ About sphinxcontrib-doxylink
 
 Home: http://sphinxcontrib-doxylink.readthedocs.io
 
-Package license: BSD
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-doxylink-feedstock/blob/main/LICENSE.txt)
 
