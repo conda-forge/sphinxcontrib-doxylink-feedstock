@@ -1,11 +1,11 @@
-About sphinxcontrib-doxylink
-============================
+About sphinxcontrib-doxylink-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-doxylink-feedstock/blob/main/LICENSE.txt)
 
 Home: http://sphinxcontrib-doxylink.readthedocs.io
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-doxylink-feedstock/blob/main/LICENSE.txt)
 
 Summary: Sphinx extension for linking to Doxygen documentation.
 
@@ -147,6 +147,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/sphinx](https://github.com/conda-forge/sphinx/)
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
 * [@erykoff](https://github.com/erykoff/)
 
