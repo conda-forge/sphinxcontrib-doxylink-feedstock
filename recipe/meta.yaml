@@ -6,28 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 62c75c150ea62521518e995cafbaa5e763ed8067d15e6fb0a582f6d6aaffe4ab
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.7,<4.0
+    - python {{ python_min }}
   run:
     - pyparsing >=3.0.8,<4.0.0
     - python-dateutil >=2.8.2,<3.0.0
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - sphinx >=1.6
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - sphinxcontrib.doxylink
   commands:
