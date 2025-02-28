@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-doxylink" %}
-{% set version = "1.12.4" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 167f2a35e840e37d38427d9ff22409eb1b0f1f17c6189155e083364c4e54b81a
+  sha256: c97f46eb86e7c73ca0c8d387511c18163ec988e4bc89d0b588ab6bed1b8c5ff8
 
 build:
   number: 0
